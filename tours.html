@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Tours | Adventurero</title>
+		<link rel="stylesheet" href="css/global.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/tours.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+			integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<header class="header container">
+			<a href="/" class="container-logo">
+				<img src="img/logo_adventurero.png" alt="Logo" />
+				<span class="logo-text"> Adventurero </span>
+			</a>
+
+			<nav class="nav-links">
+				<ul>
+					<li>
+						<a href="#" class="active">Tours</a>
+					</li>
+					<li>
+						<a href="#">Destinos</a>
+					</li>
+					<li>
+						<a href="#">Acerca de</a>
+					</li>
+					<li>
+						<a href="#">Contacto</a>
+					</li>
+				</ul>
+			</nav>
+
+			<ul class="container-sign">
+				<li class="sign-item">
+					<a href="#" class="sign-in">Entrar</a>
+				</li>
+				<li class="sign-item">
+					<a href="#" class="sign-up">Registrarse</a>
+				</li>
+			</ul>
+
+			<button class="btn-bars">
+				<i class="fa-solid fa-bars-staggered"></i>
+			</button>
+
+			<nav class="menu-responsive">
+				<a href="/" class="container-logo-responsive">
+					<img src="img/logo_adventurero.png" alt="Logo" />
+					<span class="logo-text"> Adventurero </span>
+				</a>
+
+				<ul>
+					<li>
+						<a href="#">Tours</a>
+					</li>
+					<li>
+						<a href="#">Destinos</a>
+					</li>
+					<li>
+						<a href="#">Acerca de</a>
+					</li>
+					<li>
+						<a href="#">Contacto</a>
+					</li>
+					<li>
+						<a href="#" class="sign-in">Entrar</a>
+					</li>
+					<li>
+						<a href="#" class="sign-up">Registrarse</a>
+					</li>
+				</ul>
+
+				<button class="btn-close">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+			</nav>
+		</header>
+
+		<section class="background-hero-banner">
+			<div class="container container-hero-banner">
+				<div class="column-1">
+					<h1>Elige tu paquete de viaje favorito</h1>
+
+					<p>
+						Explora nuestras increíbles ofertas de destinos con una
+						lista completa que incluye todos los lugares maravillosos
+						que puedes visitar.
+					</p>
+				</div>
+
+				<div class="column-2 container-form">
+					<form action="#" class="form">
+						<h3 class="title">
+							<span class="icon">🔶</span> Buscar paquetes
+						</h3>
+
+						<div class="form-group">
+							<select name="destination" id="destination">
+								<option value="">Destino</option>
+								<option value="paris">París</option>
+								<option value="new-york">Nueva York</option>
+								<option value="tokyo">Tokio</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<select name="guests" id="guests">
+								<option value="">Invitados</option>
+								<option value="1">1 Huésped</option>
+								<option value="2">2 Huéspedes</option>
+								<option value="3">3 Huéspedes</option>
+								<option value="4">4 o más</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="check-in">Fecha de Salida:</label>
+							<input type="date" name="check-in" id="check-in" />
+						</div>
+
+						<div class="form-group">
+							<label for="check-out">Fecha de LLegada:</label>
+							<input type="date" name="check-out" id="check-out" />
+						</div>
+
+						<button type="submit" class="btn-search">
+							Buscar ahora
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<main class="container">
+			<section class="main-tours">
+				<!-- RESPONSIVE: SELECT PARA ESCOGER FILTROS -->
+				<div class="container-select">
+					<!-- ICONO DE BUSQUEDA -->
+					<i class="fa-solid fa-search"></i>
+					<select name="filter" id="filter-select">
+						<option value="" disabled selected>
+							Escoge un filtro
+						</option>
+						<option value="all">Todos</option>
+						<option value="location">Ubicación</option>
+						<option value="type">Tipo</option>
+						<option value="price">Precio</option>
+						<option value="rating">Calificación</option>
+						<option value="duration">Duración</option>
+					</select>
+				</div>
+
+				<!-- CONTENEDOR DE FILTROS -->
+				<div class="container-filters">
+					<div class="container-filter" data-filter="location">
+						<h3>
+							<span class="icon">🔶</span>
+							Ubicación
+						</h3>
+						<div class="filter-group">
+							<span>Asia</span>
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="india" name="india" />
+								<label for="india">India</label>
+							</div>
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="japan" name="japan" />
+								<label for="japan">Japón</label>
+							</div>
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="china" name="china" />
+								<label for="china">China</label>
+							</div>
+							<div class="filter-checkbox-group">
+								<input
+									type="checkbox"
+									id="thailand"
+									name="thailand"
+								/>
+								<label for="thailand">Tailandia</label>
+							</div>
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="vietnam" name="vietnam" />
+								<label for="vietnam">Vietnam</label>
+							</div>
+						</div>
+
+						<div class="filter-group">
+							<span>Europa</span>
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="france" name="france" />
+								<label for="france">Francia</label>
+							</div>
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="italy" name="italy" />
+								<label for="italy">Italia</label>
+							</div>
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="spain" name="spain" />
+								<label for="spain">España</label>
+							</div>
+
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="germany" name="germany" />
+								<label for="germany">Alemania</label>
+							</div>
+
+							<div class="filter-checkbox-group">
+								<input
+									type="checkbox"
+									id="portugal"
+									name="portugal"
+								/>
+								<label for="portugal">Portugal</label>
+							</div>
+
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="greece" name="greece" />
+								<label for="greece">Grecia</label>
+							</div>
+
+							<div class="filter-checkbox-group">
+								<input
+									type="checkbox"
+									id="netherlands"
+									name="netherlands"
+								/>
+								<label for="netherlands">Países Bajos</label>
+							</div>
+
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="sweden" name="sweden" />
+								<label for="sweden">Suecia</label>
+							</div>
+						</div>
+
+						<div class="filter-group">
+							<span>Ámerica</span>
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="usa" name="usa" />
+								<label for="usa">Estados Unidos</label>
+							</div>
+
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="canada" name="canada" />
+								<label for="canada">Canadá</label>
+							</div>
+
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="mexico" name="mexico" />
+								<label for="mexico">México</label>
+							</div>
+						</div>
+
+						<div class="decoration"></div>
+					</div>
+
+					<div class="container-filter" data-filter="type">
+						<h3>
+							<span class="icon">🔶</span>
+							Tipo de Tour
+						</h3>
+
+						<div class="filter-checkbox-group">
+							<input
+								type="checkbox"
+								id="adventure"
+								name="adventure"
+							/>
+							<label for="adventure">Aventura</label>
+						</div>
+
+						<div class="filter-checkbox-group">
+							<input type="checkbox" id="cultural" name="cultural" />
+							<label for="cultural">Cultural</label>
+						</div>
+
+						<div class="filter-checkbox-group">
+							<input type="checkbox" id="beach" name="beach" />
+							<label for="beach">Playa</label>
+						</div>
+
+						<div class="filter-checkbox-group">
+							<input type="checkbox" id="hiking" name="hiking" />
+							<label for="hiking">Senderismo</label>
+						</div>
+
+						<div class="filter-checkbox-group">
+							<input type="checkbox" id="romance" name="romance" />
+							<label for="romance">Romance</label>
+						</div>
+
+						<div class="filter-checkbox-group">
+							<input type="checkbox" id="family" name="family" />
+							<label for="family">Familiar</label>
+						</div>
+
+						<div class="filter-checkbox-group">
+							<input type="checkbox" id="sports" name="sports" />
+							<label for="sports">Deportes</label>
+						</div>
+
+						<div class="decoration"></div>
+					</div>
+
+					<div class="container-filter" data-filter="price">
+						<h3>
+							<span class="icon">🔶</span>
+							Precio
+						</h3>
+
+						<div class="filter-group">
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="price-1" name="price-1" />
+								<label for="price-1">Menos de $500</label>
+							</div>
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="price-2" name="price-2" />
+								<label for="price-2">$500 - $1000</label>
+							</div>
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="price-3" name="price-3" />
+								<label for="price-3">$1000 - $2000</label>
+							</div>
+							<div class="filter-checkbox-group">
+								<input type="checkbox" id="price-4" name="price-4" />
+								<label for="price-4">Más de $2000</label>
+							</div>
+						</div>
+
+						<div class="decoration"></div>
+					</div>
+
+					<div class="container-filter" data-filter="duration">
+						<h3>
+							<span class="icon">🔶</span>
+							Duración
+						</h3>
+
+						<div class="filter-checkbox-group">
+							<input
+								type="checkbox"
+								id="three-days"
+								name="three-days"
+							/>
+							<label for="three-days">3 Días</label>
+						</div>
+
+						<div class="filter-checkbox-group">
+							<input
+								type="checkbox"
+								id="five-days"
+								name="five-days"
+							/>
+							<label for="five-days">5 Días</label>
+						</div>
+
+						<div class="filter-checkbox-group">
+							<input type="checkbox" id="week" name="week" />
+							<label for="week">1 Semana</label>
+						</div>
+
+						<div class="filter-checkbox-group">
+							<input type="checkbox" id="ten-days" name="ten-days" />
+							<label for="ten-days">10 Días</label>
+						</div>
+
+						<div class="filter-checkbox-group">
+							<input
+								type="checkbox"
+								id="two-weeks"
+								name="two-weeks"
+							/>
+							<label for="two-weeks">2 Semanas</label>
+						</div>
+
+						<div class="filter-checkbox-group">
+							<input
+								type="checkbox"
+								id="one-month"
+								name="one-month"
+							/>
+							<label for="one-month">1 Mes</label>
+						</div>
+
+						<div class="decoration"></div>
+					</div>
+
+					<div class="container-filter" data-filter="rating">
+						<h3><span class="icon">🔶</span> Calificación</h3>
+
+						<div class="filter-checkbox-group">
+							<input type="checkbox" id="rating-5" name="rating-5" />
+							<label for="rating-5" class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</label>
+						</div>
+						<div class="filter-checkbox-group">
+							<input type="checkbox" id="rating-4" name="rating-4" />
+							<label for="rating-4" class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star gray"></i>
+							</label>
+						</div>
+						<div class="filter-checkbox-group">
+							<input type="checkbox" id="rating-3" name="rating-3" />
+							<label for="rating-3" class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star gray"></i>
+								<i class="fa-solid fa-star gray"></i>
+							</label>
+						</div>
+						<div class="filter-checkbox-group">
+							<input type="checkbox" id="rating-2" name="rating-2" />
+							<label for="rating-2" class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star gray"></i>
+								<i class="fa-solid fa-star gray"></i>
+								<i class="fa-solid fa-star gray"></i>
+							</label>
+						</div>
+						<div class="filter-checkbox-group">
+							<input type="checkbox" id="rating-1" name="rating-1" />
+							<label for="rating-1" class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star gray"></i>
+								<i class="fa-solid fa-star gray"></i>
+								<i class="fa-solid fa-star gray"></i>
+								<i class="fa-solid fa-star gray"></i>
+							</label>
+						</div>
+
+						<div class="decoration"></div>
+					</div>
+				</div>
+
+				<!-- LISTA DE TOURS -->
+				<div class="container-tours">
+					<!-- 1 -->
+					<div class="card-tour">
+						<div class="container-img">
+							<img src="img/tours/tour-1.avif" alt="Tour 1" />
+							<div class="container-icon">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+						</div>
+
+						<div class="content-card-tour">
+							<div class="container-location-price">
+								<span class="location">
+									<i class="fa-solid fa-map-marker-alt"></i>
+									Japón
+								</span>
+								<span class="price">$565</span>
+							</div>
+							<div class="container-title">
+								<h3>Templo Kiyomizu-dera</h3>
+								<span class="type">Cultura</span>
+							</div>
+							<div class="details">
+								<span class="capacity-person">
+									<i class="fa-solid fa-user-group"></i>
+									10 personas
+								</span>
+								<span class="time">
+									<i class="fa-solid fa-clock"></i>
+									5 días
+								</span>
+							</div>
+
+							<p class="description">
+								Explora el histórico Templo Kiyomizu-dera en Kioto,
+								rodeado de hermosos paisajes y tradición japonesa.
+							</p>
+
+							<div class="reviews">
+								<span class="stars">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</span>
+								<span class="count-reviews">(22 Reseñas)</span>
+							</div>
+
+							<div class="footer-card-tour">
+								<a href="#" class="btn btn-outline">Detalles</a>
+								<a href="#" class="btn btn-solid">Reservar</a>
+							</div>
+						</div>
+					</div>
+					<!-- 2 -->
+					<div class="card-tour">
+						<div class="container-img">
+							<img src="img/tours/tour-2.avif" alt="Tour 2" />
+							<div class="container-icon">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+						</div>
+
+						<div class="content-card-tour">
+							<div class="container-location-price">
+								<span class="location">
+									<i class="fa-solid fa-map-marker-alt"></i>
+									Francia
+								</span>
+								<span class="price">$520</span>
+							</div>
+							<div class="container-title">
+								<h3>Castillo de Chambord</h3>
+								<span class="type">Cultura</span>
+							</div>
+							<div class="details">
+								<span class="capacity-person">
+									<i class="fa-solid fa-user-group"></i>
+									12 Personas
+								</span>
+								<span class="time">
+									<i class="fa-solid fa-clock"></i>
+									4 días
+								</span>
+							</div>
+
+							<p class="description">
+								Admira la majestuosidad del Castillo de Chambord, un
+								ícono renacentista rodeado de bosques encantadores en
+								el Valle del Loira.
+							</p>
+
+							<div class="reviews">
+								<span class="stars">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</span>
+								<span class="count-reviews">(30 Reseñas)</span>
+							</div>
+
+							<div class="footer-card-tour">
+								<a href="#" class="btn btn-outline">Detalles</a>
+								<a href="#" class="btn btn-solid">Reservar</a>
+							</div>
+						</div>
+					</div>
+					<!-- 3 -->
+					<div class="card-tour">
+						<div class="container-img">
+							<img src="img/tours/tour-3.avif" alt="Tour 3" />
+							<div class="container-icon">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+						</div>
+
+						<div class="content-card-tour">
+							<div class="container-location-price">
+								<span class="location">
+									<i class="fa-solid fa-map-marker-alt"></i>
+									Reino Unido
+								</span>
+								<span class="price">$450</span>
+							</div>
+							<div class="container-title">
+								<h3>Torre de Londres</h3>
+								<span class="type">Cultura</span>
+							</div>
+							<div class="details">
+								<span class="capacity-person">
+									<i class="fa-solid fa-user-group"></i>
+									8 Personas
+								</span>
+								<span class="time">
+									<i class="fa-solid fa-clock"></i>
+									5 días
+								</span>
+							</div>
+
+							<p class="description">
+								Descubre la fascinante historia de la Torre de
+								Londres, una de las fortalezas más emblemáticas de
+								Inglaterra.
+							</p>
+
+							<div class="reviews">
+								<span class="stars">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</span>
+								<span class="count-reviews">(10 Reseñas)</span>
+							</div>
+
+							<div class="footer-card-tour">
+								<a href="#" class="btn btn-outline">Detalles</a>
+								<a href="#" class="btn btn-solid">Reservar</a>
+							</div>
+						</div>
+					</div>
+					<!-- 4 -->
+					<div class="card-tour">
+						<div class="container-img">
+							<img src="img/tours/tour-4.avif" alt="Tour 4" />
+							<div class="container-icon">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+						</div>
+
+						<div class="content-card-tour">
+							<div class="container-location-price">
+								<span class="location">
+									<i class="fa-solid fa-map-marker-alt"></i>
+									Italia
+								</span>
+								<span class="price">$300</span>
+							</div>
+							<div class="container-title">
+								<h3>Coliseo Romano y Foro</h3>
+								<span class="type">Cultura</span>
+							</div>
+							<div class="details">
+								<span class="capacity-person">
+									<i class="fa-solid fa-user-group"></i>
+									12 Personas
+								</span>
+								<span class="time">
+									<i class="fa-solid fa-clock"></i>
+									2 días
+								</span>
+							</div>
+
+							<p class="description">
+								Descubre la majestuosidad del Coliseo y recorre las
+								antiguas ruinas del Foro Romano con un guía experto.
+							</p>
+
+							<div class="reviews">
+								<span class="stars">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</span>
+								<span class="count-reviews">(8 Reseñas)</span>
+							</div>
+
+							<div class="footer-card-tour">
+								<a href="#" class="btn btn-outline">Detalles</a>
+								<a href="#" class="btn btn-solid">Reservar</a>
+							</div>
+						</div>
+					</div>
+					<!-- 5 -->
+					<div class="card-tour">
+						<div class="container-img">
+							<img src="img/tours/tour-5.avif" alt="Tour 5" />
+							<div class="container-icon">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+						</div>
+
+						<div class="content-card-tour">
+							<div class="container-location-price">
+								<span class="location">
+									<i class="fa-solid fa-map-marker-alt"></i>
+									Egipto
+								</span>
+								<span class="price">$800</span>
+							</div>
+							<div class="container-title">
+								<h3>Pirámides de Giza y Esfinge</h3>
+								<span class="type">Aventura</span>
+							</div>
+							<div class="details">
+								<span class="capacity-person">
+									<i class="fa-solid fa-user-group"></i>
+									20 Personas
+								</span>
+								<span class="time">
+									<i class="fa-solid fa-clock"></i>
+									3 días
+								</span>
+							</div>
+
+							<p class="description">
+								Vive una experiencia única recorriendo las Pirámides
+								de Giza y la Gran Esfinge, joyas de la civilización
+								egipcia.
+							</p>
+
+							<div class="reviews">
+								<span class="stars">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</span>
+								<span class="count-reviews">(40 Reseñas)</span>
+							</div>
+
+							<div class="footer-card-tour">
+								<a href="#" class="btn btn-outline">Detalles</a>
+								<a href="#" class="btn btn-solid">Reservar</a>
+							</div>
+						</div>
+					</div>
+					<!-- 6 -->
+					<div class="card-tour">
+						<div class="container-img">
+							<img src="img/tours/tour-6.avif" alt="Tour 6" />
+							<div class="container-icon">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+						</div>
+
+						<div class="content-card-tour">
+							<div class="container-location-price">
+								<span class="location">
+									<i class="fa-solid fa-map-marker-alt"></i>
+									Estados Unidos
+								</span>
+								<span class="price">$500</span>
+							</div>
+							<div class="container-title">
+								<h3>Parque Nacional Yellowstone</h3>
+								<span class="type">Aventura</span>
+							</div>
+							<div class="details">
+								<span class="capacity-person">
+									<i class="fa-solid fa-user-group"></i>
+									12 Personas
+								</span>
+								<span class="time">
+									<i class="fa-solid fa-clock"></i>
+									5 días
+								</span>
+							</div>
+
+							<p class="description">
+								Explora el primer parque nacional del mundo, famoso
+								por sus géiseres, vida silvestre y paisajes
+								impresionantes.
+							</p>
+
+							<div class="reviews">
+								<span class="stars">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</span>
+								<span class="count-reviews">(12 Reseñas)</span>
+							</div>
+
+							<div class="footer-card-tour">
+								<a href="#" class="btn btn-outline">Detalles</a>
+								<a href="#" class="btn btn-solid">Reservar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="container-pagination">
+				<a href="#" class="active">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#" class="next">
+					<i class="fa-solid fa-chevron-right"></i>
+				</a>
+			</section>
+		</main>
+
+		<!-- FOOTER -->
+		<footer>
+			<div class="container footer-content">
+				<div class="columns-footer">
+					<div class="column">
+						<a href="/" class="container-logo">
+							<img src="img/logo_adventurero.png" alt="Logo" />
+							<span class="logo-text"> Adventurero </span>
+						</a>
+
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing
+							elit. Ea earum eaque soluta eveniet aliquid provident
+							obcaecati odit? Natus, numquam nostrum.
+						</p>
+
+						<div class="container-social-links">
+							<span>Síguenos: </span>
+							<div class="links">
+								<a href="#">
+									<i class="fab fa-facebook"></i>
+								</a>
+								<a href="#">
+									<i class="fab fa-twitter"></i>
+								</a>
+								<a href="#">
+									<i class="fab fa-instagram"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="column">
+						<span> Sobre Nosotros </span>
+
+						<ul>
+							<li>
+								<a href="#">Nuestra Historia</a>
+							</li>
+							<li>
+								<a href="#">Blog Viajes y consejos</a>
+							</li>
+							<li>
+								<a href="#">Trabaja con nosotros</a>
+							</li>
+							<li>
+								<a href="#">Términos y condiciones</a>
+							</li>
+							<li>
+								<a href="#">Preguntas Frecuentes</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="column">
+						<span>Soporte</span>
+
+						<ul>
+							<li>
+								<a href="#">Soporte al cliente</a>
+							</li>
+							<li>
+								<a href="#">Políticas de privacidad</a>
+							</li>
+							<li>
+								<a href="#">Contáctanos</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="column">
+						<span> Paga de forma segura con nosotros </span>
+
+						<p>
+							El pago es encriptado y transmitido de forma segura con
+							el protocolo SSL.
+						</p>
+
+						<div class="container-payment-methods">
+							<img
+								src="img/payment-methods.png"
+								alt="Métodos de Pago"
+							/>
+						</div>
+					</div>
+				</div>
+
+				<p class="copyright">
+					&copy; 2024 Adventurero | Desarrollado por Roberto Andrade
+				</p>
+			</div>
+		</footer>
+
+		<script src="js/global.js"></script>
+		<script src="js/tours.js"></script>
+	</body>
+</html>
