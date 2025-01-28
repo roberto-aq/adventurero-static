@@ -1,17 +1,19 @@
 ## Iconos Utilizados
+
 - Brujula: <i class="fas fa-compass"></i>
 - Mapa: <i class="fas fa-map"></i>
 - Ubicación Pin: <i class="fa-solid fa-location-dot"></i>
 - Corazón relleno: <i class="fa-regular fa-heart"></i>
-- Ubicación:  <i class="fa-solid fa-map-pin"></i>
+- Ubicación: <i class="fa-solid fa-map-pin"></i>
 - Personas: <i class="fa-solid fa-user-group"></i>
 - Reloj: <i class="fa-solid fa-clock"></i>
 - Estrella solida: <i class="fa-solid fa-star"></i>
 - Facebook: <i class="fab fa-facebook"></i>
 - X/Twitter: <i class="fab fa-twitter"></i>
 - Instagram: <i class="fab fa-instagram"></i>
-
-
+- Busqueda: <i class="fa-solid fa-search"></i>
+- Ubicación 2: <i class="fa-solid fa-map-marker-alt"></i>
+- Derecha: <i class="fa-solid fa-chevron-right"></i>
 
 # Textos Utilizados (INDEX)
 
@@ -66,6 +68,7 @@ inolvidable.
 ```
 
 ### Testimonios
+
 ```
 - Testimonios
 - Viajes inolvidables, experiencias compartidas por viajeros
@@ -101,3 +104,80 @@ diseñado. Me encantó la atención personalizada.
 tu próximo viaje. Explora el mundo a través de nuestros
 artículos y mantente informado.
 ```
+
+# Textos Utilizados (TOURS)
+
+| Encabezado 1 | Encabezado 2 | Encabezado 3 |
+| ------------ | ------------ | ------------ |
+| Celda 1      | Celda 2      |              |
+| Celda 4      | Celda 5      | Celda 6      |
+| Celda 7      | Celda 8      | Celda 9      |
+
+Lista de Tours
+
+- Tour 1:
+
+### Tour 6:
+- País: Japón
+- Precio: $565
+- Lugar: Templo Kiyomizu-dera
+- Tipo: Cultura
+- Capacidad de personas: 10 personas
+- Días: 5 días
+- Descripción: Explora el histórico Templo Kiyomizu-dera en Kioto,
+rodeado de hermosos paisajes y tradición japonesa.
+
+### Tour 2:
+- País: Francia
+- Precio: $520
+- Lugar: Castillo de Chambord
+- Tipo: Cultura
+- Capacidad de personas: 12 personas
+- Días: 4 días
+- Descripción: Admira la majestuosidad del Castillo de Chambord, un
+ícono renacentista rodeado de bosques encantadores en
+el Valle del Loira.
+
+### Tour 3:
+- País: Reino Unido
+- Precio: $450
+- Lugar: Torre de Londres
+- Tipo: Cultura
+- Capacidad de personas: 8 personas
+- Días: 5 días
+- Descripción: Descubre la fascinante historia de la Torre de
+Londres, una de las fortalezas más emblemáticas de
+Inglaterra.
+
+
+### Tour 4:
+- País: Italia
+- Precio: $300
+- Lugar: Coliseo Romano y Foro
+- Tipo: Cultura
+- Capacidad de personas: 12 personas
+- Días: 2 días
+- Descripción: Descubre la majestuosidad del Coliseo y recorre las
+antiguas ruinas del Foro Romano con un guía experto.
+
+### Tour 5:
+- País: Egipto
+- Precio: $800
+- Lugar: Pirámides de Giza y Esfinge
+- Tipo: Aventura
+- Capacidad de personas: 20 personas
+- Días: 3 días
+- Descripción: Vive una experiencia única recorriendo las Pirámides
+de Giza y la Gran Esfinge, joyas de la civilización
+egipcia.
+
+### Tour 6:
+- País: Estados Unidos
+- Precio: $500
+- Lugar: Parque Nacional Yellowstone
+- Tipo: Aventura
+- Capacidad de personas: 12 personas
+- Días: 5 días
+- Descripción: Explora el primer parque nacional del mundo, famoso
+por sus géiseres, vida silvestre y paisajes
+impresionantes.
